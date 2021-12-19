@@ -61,3 +61,10 @@ old = hookmetamethod(game,"__namecall",function(a,b,...)
    end
    return old(a,b,...)
 end)
+
+spawn(function()
+for i = 1, 100 do
+   getgenv().WaitForDescendant = WaitForDescendant
+   getgenv().wfd = WaitForDescendant
+end
+end)
